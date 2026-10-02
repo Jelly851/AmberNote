@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>AmberNote Icon</title>
+  <style>
+    body {
+      margin: 0; background: #141414;
+      display: flex; flex-direction: column; align-items: center;
+      padding: 48px 24px; font-family: -apple-system, sans-serif;
+      gap: 40px; box-sizing: border-box;
+    }
+    h1 { color: #555; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; margin: 0; font-weight: 400; }
+    p  { color: #444; font-size: 11px; max-width: 500px; text-align: center; line-height: 1.9; margin: 0; }
+    .row { display: flex; gap: 28px; flex-wrap: wrap; justify-content: center; align-items: flex-end; }
+    .col { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .lbl { color: #555; font-size: 11px; text-align: center; line-height: 1.5; }
+    hr { border: none; border-top: 1px solid #1e1e1e; width: 100%; max-width: 660px; }
+    .saved { border:1px solid #1e1e1e; border-radius:12px; padding:14px 22px; display:flex; flex-direction:column; align-items:center; gap:8px; }
+    .slbl { color:#2d2d2d; font-size:10px; letter-spacing:1px; text-transform:uppercase; }
+  </style>
+</head>
+<body>
+
+<h1>A + ♪ — tight diagonal · note bottom-left · A top-right · ~150px gap at junction</h1>
+
+<!--
+  DESIGN NOTES
+  ────────────
+  · Note moved right (cx=305), A left foot moved left (410) — tight gap at junction
+  · Gap between stem top and A left leg at crossbar height: ~155px (was ~330px)
+  · Full A — both legs from peak to base
+  · A italic: peak at (705,162), foot-centre=635 → +70px right lean
+  · Stem height 306px ≈ 2.4× notehead height — proper eighth note ratio
+  · Stem from RIGHT side of notehead (traditional)
+  · FLAG = CROSSBAR: short arc ~155px of "wing" before hitting A left leg
+-->
+
+<!-- ── LARGE ─────────────────────────────────────────────── -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="340" height="340">
+  <defs>
+    <radialGradient id="bg0" cx="44%" cy="30%" r="75%">
+      <stop offset="0%"  stop-color="#FBBF24"/>
+      <stop offset="42%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#7C2D12"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="220" fill="url(#bg0)"/>
+
+  <!-- A left leg — steep (italic) -->
+  <line x1="490" y1="690" x2="665" y2="200"
+        stroke="#FFF6E8" stroke-width="52" stroke-linecap="round"/>
+
+  <!-- A right leg — gentle slope -->
+  <line x1="840" y1="690" x2="665" y2="200"
+        stroke="#FFF6E8" stroke-width="52" stroke-linecap="round"/>
+
+  <!-- FLAG / CROSSBAR — arc from stem top through A left leg to A right leg -->
+  <path d="M 408,435 C 455,403 645,415 778,436"
+        stroke="#FFF6E8" stroke-width="48" fill="none" stroke-linecap="round"/>
+
+  <!-- Eighth note stem — starts inside notehead, cap merges flush -->
+  <line x1="383" y1="778" x2="408" y2="435"
+        stroke="#FFF6E8" stroke-width="48" stroke-linecap="round"/>
+
+  <!-- Eighth note notehead — larger oval to match A's visual weight, -14° tilt -->
+  <ellipse cx="300" cy="800" rx="115" ry="82"
+           fill="#FFF6E8" transform="rotate(-14 300 800)"/>
+</svg>
+
+<!-- ── SIZE ROW ──────────────────────────────────────────── -->
+<div class="row">
+
+  <div class="col">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="120" height="120" style="border-radius:27px">
+      <defs><radialGradient id="bg1" cx="44%" cy="30%" r="75%"><stop offset="0%" stop-color="#FBBF24"/><stop offset="42%" stop-color="#D97706"/><stop offset="100%" stop-color="#7C2D12"/></radialGradient></defs>
+      <rect width="1024" height="1024" rx="220" fill="url(#bg1)"/>
+      <line x1="490" y1="690" x2="665" y2="200" stroke="#FFF6E8" stroke-width="52" stroke-linecap="round"/>
+      <line x1="840" y1="690" x2="665" y2="200" stroke="#FFF6E8" stroke-width="52" stroke-linecap="round"/>
+      <path d="M 408,435 C 455,403 645,415 778,436" stroke="#FFF6E8" stroke-width="48" fill="none" stroke-linecap="round"/>
+      <line x1="383" y1="848" x2="408" y2="435" stroke="#FFF6E8" stroke-width="48" stroke-linecap="round"/>
+      <ellipse cx="300" cy="870" rx="115" ry="82" fill="#FFF6E8" transform="rotate(-14 300 870)"/>
+    </svg>
+    <div class="lbl">120px</div>
+  </div>
+
+  <div class="col">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="76" height="76" style="border-radius:17px">
+      <rect width="1024" height="1024" rx="220" fill="#D97706"/>
+      <line x1="490" y1="690" x2="665" y2="200" stroke="#FFF6E8" stroke-width="52" stroke-linecap="round"/>
+      <line x1="840" y1="690" x2="665" y2="200" stroke="#FFF6E8" stroke-width="52" stroke-linecap="round"/>
+      <path d="M 408,435 C 455,403 645,415 778,436" stroke="#FFF6E8" stroke-width="48" fill="none" stroke-linecap="round"/>
+      <line x1="383" y1="848" x2="408" y2="435" stroke="#FFF6E8" stroke-width="48" stroke-linecap="round"/>
+      <ellipse cx="300" cy="870" rx="115" ry="82" fill="#FFF6E8" transform="rotate(-14 300 870)"/>
+    </svg>
+    <div class="lbl">76px</div>
+  </div>
+
+  <div class="col">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="44" height="44" style="border-radius:10px">
+      <rect width="1024" height="1024" rx="220" fill="#D97706"/>
+      <line x1="490" y1="690" x2="665" y2="200" stroke="#FFF6E8" stroke-width="52" stroke-linecap="round"/>
+      <line x1="840" y1="690" x2="665" y2="200" stroke="#FFF6E8" stroke-width="52" stroke-linecap="round"/>
+      <path d="M 408,435 C 455,403 645,415 778,436" stroke="#FFF6E8" stroke-width="48" fill="none" stroke-linecap="round"/>
+      <line x1="383" y1="848" x2="408" y2="435" stroke="#FFF6E8" stroke-width="48" stroke-linecap="round"/>
+      <ellipse cx="300" cy="870" rx="115" ry="82" fill="#FFF6E8" transform="rotate(-14 300 870)"/>
+    </svg>
+    <div class="lbl">44px</div>
+  </div>
+
+  <div class="col">
+    <div style="background:#e2e2e2;padding:14px;border-radius:14px;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="76" height="76" style="border-radius:17px">
+        <defs><radialGradient id="bg2" cx="44%" cy="30%" r="75%"><stop offset="0%" stop-color="#FBBF24"/><stop offset="42%" stop-color="#D97706"/><stop offset="100%" stop-color="#7C2D12"/></radialGradient></defs>
+        <rect width="1024" height="1024" rx="220" fill="url(#bg2)"/>
+        <line x1="410" y1="715" x2="705" y2="162" stroke="#FFF6E8" stroke-width="68" stroke-linecap="round"/>
+        <line x1="860" y1="715" x2="705" y2="162" stroke="#FFF6E8" stroke-width="68" stroke-linecap="round"/>
+        <path d="M 408,432 C 462,400 660,412 778,436" stroke="#FFF6E8" stroke-width="28" fill="none" stroke-linecap="round"/>
+        <line x1="390" y1="738" x2="408" y2="432" stroke="#FFF6E8" stroke-width="30" stroke-linecap="round"/>
+        <ellipse cx="305" cy="758" rx="88" ry="63" fill="#FFF6E8" transform="rotate(-14 305 758)"/>
+      </svg>
+    </div>
+    <div class="lbl">light screen</div>
+  </div>
+
+</div>
+
+<hr/>
+<p>
+  Note shifted right (cx=305) · A left foot at 410 · flag wing only ~155px before junction<br>
+  Stem 306px ≈ 2.4× notehead — proper ratio · stem from right side of notehead<br>
+  Composition centre ~(475, 525)
+</p>
+<hr/>
+
+<!-- ── SAVED ─────────────────────────────────────────────── -->
+<div style="display:flex;gap:24px;flex-wrap:wrap;justify-content:center;">
+
+  <div class="saved">
+    <div class="slbl">Saved — Previous (italic A, centred)</div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="72" height="72" style="border-radius:16px;opacity:0.7">
+      <defs><radialGradient id="bs0" cx="44%" cy="30%" r="75%"><stop offset="0%" stop-color="#FBBF24"/><stop offset="42%" stop-color="#D97706"/><stop offset="100%" stop-color="#7C2D12"/></radialGradient></defs>
+      <rect width="1024" height="1024" rx="220" fill="url(#bs0)"/>
+      <line x1="185" y1="826" x2="595" y2="162" stroke="#FFF6E8" stroke-width="82" stroke-linecap="round"/>
+      <line x1="595" y1="162" x2="855" y2="826" stroke="#FFF6E8" stroke-width="82" stroke-linecap="round"/>
+      <path d="M 242,492 C 300,448 590,450 722,482" stroke="#FFF6E8" stroke-width="27" fill="none" stroke-linecap="round"/>
+      <line x1="224" y1="794" x2="242" y2="492" stroke="#FFF6E8" stroke-width="27" stroke-linecap="round"/>
+      <ellipse cx="132" cy="812" rx="94" ry="67" fill="#FFF6E8" transform="rotate(-14 132 812)"/>
+    </svg>
+    <div class="slbl" style="color:#2a2a2a">v3 — full A centred</div>
+  </div>
+
+  <div class="saved">
+    <div class="slbl">Saved — Balanced / Italic A</div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="72" height="72" style="border-radius:16px;opacity:0.9">
+      <defs><radialGradient id="bs4" cx="44%" cy="30%" r="75%"><stop offset="0%" stop-color="#FBBF24"/><stop offset="42%" stop-color="#D97706"/><stop offset="100%" stop-color="#7C2D12"/></radialGradient></defs>
+      <rect width="1024" height="1024" rx="220" fill="url(#bs4)"/>
+      <line x1="490" y1="690" x2="665" y2="200" stroke="#FFF6E8" stroke-width="52" stroke-linecap="round"/>
+      <line x1="840" y1="690" x2="665" y2="200" stroke="#FFF6E8" stroke-width="52" stroke-linecap="round"/>
+      <path d="M 408,435 C 455,403 645,415 778,436" stroke="#FFF6E8" stroke-width="48" fill="none" stroke-linecap="round"/>
+      <line x1="383" y1="848" x2="408" y2="435" stroke="#FFF6E8" stroke-width="48" stroke-linecap="round"/>
+      <ellipse cx="300" cy="870" rx="115" ry="82" fill="#FFF6E8" transform="rotate(-14 300 870)"/>
+    </svg>
+    <div class="slbl" style="color:#2a2a2a">note lower · italic A</div>
+  </div>
+
+  <div class="saved">
+    <div class="slbl">Saved — Diagonal / Interlocked</div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="72" height="72" style="border-radius:16px;opacity:0.7">
+      <defs><radialGradient id="bs1" cx="44%" cy="30%" r="75%"><stop offset="0%" stop-color="#FBBF24"/><stop offset="42%" stop-color="#D97706"/><stop offset="100%" stop-color="#7C2D12"/></radialGradient></defs>
+      <rect width="1024" height="1024" rx="220" fill="url(#bs1)"/>
+      <line x1="228" y1="810" x2="570" y2="158" stroke="#FFF6E8" stroke-width="82" stroke-linecap="round"/>
+      <line x1="570" y1="158" x2="862" y2="810" stroke="#FFF6E8" stroke-width="82" stroke-linecap="round"/>
+      <line x1="411" y1="484" x2="716" y2="484" stroke="#FFF6E8" stroke-width="22" stroke-linecap="round"/>
+      <path d="M 570,158 C 660,108 810,170 800,300" stroke="#FFF6E8" stroke-width="26" fill="none" stroke-linecap="round"/>
+      <ellipse cx="218" cy="814" rx="92" ry="66" fill="#FFF6E8" transform="rotate(-14 218 814)"/>
+    </svg>
+    <div class="slbl" style="color:#2a2a2a">stem = left leg of A</div>
+  </div>
+
+  <div class="saved">
+    <div class="slbl">Saved — Abstract Guitar Body</div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="72" height="72" style="border-radius:16px;opacity:0.7">
+      <defs>
+        <radialGradient id="bs2" cx="44%" cy="30%" r="75%"><stop offset="0%" stop-color="#FBBF24"/><stop offset="42%" stop-color="#D97706"/><stop offset="100%" stop-color="#7C2D12"/></radialGradient>
+        <mask id="hbs"><rect width="1024" height="1024" fill="white"/><circle cx="412" cy="530" r="60" fill="black"/></mask>
+      </defs>
+      <rect width="1024" height="1024" rx="224" fill="url(#bs2)"/>
+      <line x1="164" y1="874" x2="512" y2="150" stroke="#FFF6E8" stroke-width="94" stroke-linecap="round"/>
+      <line x1="860" y1="874" x2="512" y2="150" stroke="#FFF6E8" stroke-width="94" stroke-linecap="round"/>
+      <path d="M 290,530 C 290,458 342,425 400,425 C 458,425 484,490 512,490 C 540,490 566,428 624,428 C 682,428 734,458 734,530 C 734,602 682,635 624,635 C 566,635 540,570 512,570 C 484,570 458,635 400,635 C 342,635 290,602 290,530 Z" fill="#FFF6E8" mask="url(#hbs)"/>
+    </svg>
+    <div class="slbl" style="color:#2a2a2a">abstract / revisit</div>
+  </div>
+
+</div>
+
+</body>
+</html>
